@@ -17,7 +17,7 @@ class CreateSubscriptionsTable extends Migration
             $table->id();
             $table->bigInteger('provider_id')->unsigned()->index();
             $table->integer('provider_user_id');
-            $table->string('status');
+            $table->boolean('active');
             $table->dateTime('valid_until');
             $table->timestamps();
         });

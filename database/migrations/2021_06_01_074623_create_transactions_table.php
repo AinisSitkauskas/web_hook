@@ -18,7 +18,8 @@ class CreateTransactionsTable extends Migration
             $table->bigInteger('subscription_id')->unsigned()->index();
             $table->bigInteger('provider_id')->unsigned()->index();
             $table->integer('provider_user_id');
-            $table->string('status');
+            $table->string('provider_transaction_id');
+            $table->boolean('payed');
             $table->double('payment_amount', 9, 2);
             $table->dateTime('payment_time');
         });
